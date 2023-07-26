@@ -1,10 +1,9 @@
+import './App.css';
 import { useState, useEffect } from 'react';
 import { fetchCotationsData } from './services/axios';
-import { BarController } from 'chart.js';
 
 function App() {
   const [cotationsData, setCotationsData] = useState({});
-  const [chartData, setChartData] = useState({});
 
   useEffect(() => {
     const getCotationsData = async () => {
@@ -17,10 +16,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Cotações das moedas:</h1>
-      <div>
+      <h1 className='title'>Cotações das moedas:</h1>
+      <div className='card-container'>
         {Object.entries(cotationsData).map(([currentPair, values]) => (
-        <p key={currentPair}>
+        <p className='card' key={currentPair}>
           {currentPair}: {values.bid}
         </p>
         ))}
