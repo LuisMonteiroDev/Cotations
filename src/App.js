@@ -15,7 +15,7 @@ function App() {
     };
 
     getCotationsUSD();
-  }, [cotationsUSD])
+  }, [])
 
   useEffect(() => {
     const getCotationsBTC = async () => {
@@ -24,7 +24,7 @@ function App() {
     };
 
     getCotationsBTC();
-  }, [cotationsBTC])
+  }, [])
 
   useEffect(() => {
     const getCotationsEUR = async () => {
@@ -33,7 +33,7 @@ function App() {
     };
 
     getCotationsEUR();
-  }, [cotationsEUR])
+  }, [])
 
   return (
     <div className="App">
