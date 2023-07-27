@@ -19,7 +19,6 @@ export const fetchCotationsDataEUR = async () => {
         console.log('Erro ao obter os dados da API:', error);
     };
 }
-
 export const fetchCotationsDataBTC = async () => {
     try{
         const response = await axios.get(`${URL}/last/BTC-BRL`);
