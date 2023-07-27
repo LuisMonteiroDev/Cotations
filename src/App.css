@@ -13,6 +13,7 @@
   border-radius: 8px;
   text-align: center;
   padding: 10px;
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.863);
   font-weight: bold;
 }
 
@@ -23,13 +24,37 @@
 }
 
 .card {
-  background-color: #98fb98;
+  background-color: #dd2828;
   border: 1px solid #ccc;
   font-weight: bold;
   padding: 20px;
   border-radius: 8px;
   width: 250px;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.863);
+  margin-bottom: 20px;
+}
+
+.card-btc {
+  background-color: #55dd55;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.863);
+  margin-bottom: 20px;
+}
+
+.card-eur {
+  background-color: #251bb6;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.863);
   margin-bottom: 20px;
 }

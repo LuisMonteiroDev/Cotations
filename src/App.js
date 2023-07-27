@@ -1,25 +1,60 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { fetchCotationsData } from './services/axios';
+import { fetchCotationsDataUSD, fetchCotationsDataBTC, fetchCotationsDataEUR } from './services/axios';
 
 function App() {
-  const [cotationsData, setCotationsData] = useState({});
+  const [cotationsUSD, setCotationsUSD] = useState({});
+  const [cotationsBTC, setCotationsBTC] = useState({});
+  const [cotationsEUR, setCotationsEUR] = useState({});
+
 
   useEffect(() => {
-    const getCotationsData = async () => {
-      const data = await fetchCotationsData();
-      setCotationsData(data);
+    const getCotationsUSD = async () => {
+      const data = await fetchCotationsDataUSD();
+      setCotationsUSD(data);
     };
 
-    getCotationsData();
+    getCotationsUSD();
+  }, [])
+
+  useEffect(() => {
+    const getCotationsBTC = async () => {
+      const data = await fetchCotationsDataBTC();
+      setCotationsBTC(data);
+    };
+
+    getCotationsBTC();
+  }, [])
+
+  useEffect(() => {
+    const getCotationsEUR = async () => {
+      const data = await fetchCotationsDataEUR();
+      setCotationsEUR(data);
+    };
+
+    getCotationsEUR();
   }, [])
 
   return (
     <div className="App">
       <h1 className='title'>Cotações das moedas:</h1>
       <div className='card-container'>
-        {Object.entries(cotationsData).map(([currentPair, values]) => (
+        {Object.entries(cotationsUSD).map(([currentPair, values]) => (
         <p className='card' key={currentPair}>
+          {currentPair}: {values.bid}
+        </p>
+        ))}
+      </div>
+      <div className='card-container'>
+        {Object.entries(cotationsBTC).map(([currentPair, values]) => (
+        <p className='card-btc' key={currentPair}>
+          {currentPair}: {values.bid}
+        </p>
+        ))}
+      </div>
+      <div className='card-container'>
+        {Object.entries(cotationsEUR).map(([currentPair, values]) => (
+        <p className='card-eur' key={currentPair}>
           {currentPair}: {values.bid}
         </p>
         ))}
