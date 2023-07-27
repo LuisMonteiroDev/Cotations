@@ -41,13 +41,17 @@ function App() {
       <div className='card-container'>
         {Object.entries(cotationsUSD).map(([currentPair, values]) => (
         <p className='card' key={currentPair}>
-          {currentPair}: {values.bid}
+          {values.name}
+          <br></br>
+          {currentPair}: {values.bid} 
         </p>
         ))}
       </div>
       <div className='card-container'>
         {Object.entries(cotationsBTC).map(([currentPair, values]) => (
         <p className='card-btc' key={currentPair}>
+          {values.name}
+          <br></br>
           {currentPair}: {values.bid}
         </p>
         ))}
@@ -55,6 +59,8 @@ function App() {
       <div className='card-container'>
         {Object.entries(cotationsEUR).map(([currentPair, values]) => (
         <p className='card-eur' key={currentPair}>
+          {values.name}
+          <br></br>
           {currentPair}: {values.bid}
         </p>
         ))}
