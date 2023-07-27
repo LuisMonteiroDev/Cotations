@@ -65,6 +65,20 @@ function App() {
         </p>
         ))}
       </div>
+      <div className='card-container'>
+        {Object.entries(cotationsBTC).map(([currentPair, values]) => (
+        <p className='card-btc' key={currentPair}>
+          {currentPair}: {values.bid}
+        </p>
+        ))}
+      </div>
+      <div className='card-container'>
+        {Object.entries(cotationsEUR).map(([currentPair, values]) => (
+        <p className='card-eur' key={currentPair}>
+          {currentPair}: {values.bid}
+        </p>
+        ))}
+      </div>
     </div>
   );
 }
